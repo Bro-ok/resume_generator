@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="resume.css">
+    
+</head>
+<body>
+    <div class="container" id="resume">
+    <h1 class="text-center my-2">Resume Generator</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+            <label for="nameField">Your Name</label>
+            <input type="text" id="nameField" placeholder="Enter here " class="form-control" >
+        </div>
+        <div class="form-group mt-2">
+            <label for="contactField">Your Contact</label>
+            <input type="text" id="contactField" placeholder="Enter here " class="form-control" >
+        </div>
+        <div class="form-group mt-2">
+            <label for="AddressField">Your Address</label>
+            <textarea  id="AddressField" placeholder="Enter here" class="form-control" 
+            rows="5">
+                </textarea>
+                <p class="text-secondary my-3">Important Links</p>
+                <div class="form-group mt-2">
+                    <label for="fbField">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter here " class="form-control" >
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instaField">Instagram</label>
+                    <input type="text" id="instaField" placeholder="Enter here " class="form-control" >
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">linked In</label>
+                    <input type="text" id="linkedField" placeholder="Enter here " class="form-control" >
+                </div>
+
+        </div>
+    
+        </div>
+        <div class="col-md-6">
+            <h3>Professinol Information</h3>
+            <div class="form-group mt-2">
+                <label>Objective</label>
+                <textarea  placeholder="Enter here" class="form-control" id="Objective"
+                rows="5">
+      </textarea> 
+      </div> 
+      <div class="form-group mt-2" id="we">
+        <label>Work Experience</label>
+        <textarea  placeholder="Enter here" class="form-control weField1" id="work1" >
+</textarea>
+<textarea  placeholder="Enter here" class="form-control weField2" id="work2" >
+</textarea> 
+<textarea  placeholder="Enter here" class="form-control weField3" id="work3" >
+</textarea> 
+<textarea  placeholder="Enter here" class="form-control weField4" id="work4" >
+</textarea> 
+</div> 
+<div class="container text-center mt-3" id="weAddBtn">
+ 
+</div>
+<div class="form-group mt-2" id="aq">
+    <label>Academic Qualifications</label>
+    <textarea  placeholder="Enter here" class="form-control aqField1" id="aq1">
+</textarea> 
+<textarea  placeholder="Enter here" class="form-control aqField2" id="aq2" >
+</textarea> 
+<textarea  placeholder="Enter here" class="form-control aqField3" id="aq3">
+</textarea> 
+<textarea  placeholder="Enter here" class="form-control aqField4" id="aq4">
+</textarea> 
+
+</div> 
+<div class="container text-center mt-3" id="aqAddBtn">
+
+</div>
+    </div>
+</div>
+
+<div class="container text-center mt-3">
+    <button  onclick="generateCV()" class="btn btn-dark btnsm">Generate cv</button>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+<div class="container" id="resumeTamplet">  
+
+    <div class="row">
+        
+        <div class="col-md-4">
+            <img  src="data:image/jpeg;base64,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" alt="">
+                 
+         
+         <div class="container">
+            <p class="text-center" id="nameFieldt">name</p>
+            <p class="text-center" id="contactFieldt">contact</p>
+            <p class="text-center" id="addressFieldt">address</p>
+         </div>
+         <hr>
+         <div class="container">
+            <p class="text-center" id="fbFieldt"><a href="#1">facebook</a></p>       
+            <p class="text-center" id="instaFieldt"><a href="#1">instagram</a></p>          
+            <p class="text-center" id="linkedFieldt"><a href="#1">linked in</a></p>
+            <br>
+
+         </div>
+        </div>
+        <div class="col-md-8">
+            <h1 class="text-center header " id="namefielt"> Name</h1>
+            <div class="card">
+                <div class="card header">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card body" id="objectivet">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ad tempora a, ipsa veritatis vitae est modi debitis 
+                        placeat voluptatum repellendus obcaecati asperiores molestiae aliquid ab reiciendis ipsum architecto vel?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur reiciendis saepe optio assumenda maxime tempore!
+                     In, dolore adipisci at veniam excepturi sint. Fugit nulla veniam modi eligendi fugiat ipsam enim?</p>
+                </div>
+            </div>
+          
+            <div class="card">
+                <div class="card header">
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="card body">
+                    <ul >
+                        <li id="wet1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, suscipit modi quisquam soluta quis ipsam facilis, consequuntur, 
+                            ipsa illum ratione hic recusandae distinctio est exercitationem blanditiis commodi. Ut, quis cupiditate.</li>
+                     <li id="wet2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis deserunt, perferendis, eius vitae consequuntur
+                         placeat error impedit earum quae id velit eaque. Enim doloremque minima et molestias ipsam explicabo saepe.</li>
+                         <li id="wet3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis deserunt, perferendis, eius vitae consequuntur
+                            placeat error impedit earum quae id velit eaque. Enim doloremque minima et molestias ipsam explicabo saepe.</li>
+                            <li id="wet4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis deserunt, perferendis, eius vitae consequuntur
+                                placeat error impedit earum quae id velit eaque. Enim doloremque minima et molestias ipsam explicabo saepe.</li>
+                        </ul>
+                </div>
+            </div>
+                
+            <div class="card">
+                <div class="card header">
+                    <h3>Academic Qualifications</h3>
+                </div>
+                <div class="card body">
+                 <ul>
+                    <li id="qua1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, a. Quaerat a aspernatur ab sequi esse
+                         inventore velit neque ducimus ipsum accusamus fugiat praesentium consequatur ipsam molestias beatae, rerum aperiam?</li>
+                    <li id="qua2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tenetur praesentium natus reiciendis amet, vel
+                         sit dignissimos eum voluptatibus alias culpa et. Sit totam quasi unde quibusdam enim dignissimos suscipit.</li>
+                         <li id="qua3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis deserunt, perferendis, eius vitae consequuntur
+                            placeat error impedit earum quae id velit eaque. Enim doloremque minima et molestias ipsam explicabo saepe.</li>
+                            <li id="qua4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis deserunt, perferendis, eius vitae consequuntur
+                                placeat error impedit earum quae id velit eaque. Enim doloremque minima et molestias ipsam explicabo saepe.</li>
+                                <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+                 </ul>
+                 <br>
+
+            </div>
+        </div>
+        </div>
+        <br>
+
+        
+    </div>
+</div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+    <script src="resume.js"></script>
+</body>
+</html>
