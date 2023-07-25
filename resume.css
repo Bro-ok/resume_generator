@@ -1,0 +1,36 @@
+img{
+    border-radius: 50%; 
+    margin-left: 85px;
+
+}
+.col-md-4{
+    background-color: black;
+     
+}
+.header{
+    background-color: black;
+    color: whitesmoke;
+}
+#nameFieldt{
+    color: aliceblue;
+    text-transform: capitalize;
+}
+#namefielt{
+    text-transform: uppercase;
+}
+#contactFieldt{
+    color: whitesmoke;
+}
+#addressFieldt{
+    color: whitesmoke;
+}
+#fbFieldt{
+    color: whitesmoke;
+}
+#instaFieldt{
+    color: whitesmoke;
+}
+#linkedFieldt{
+    color: whitesmoke;
+}
+
